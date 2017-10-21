@@ -173,11 +173,11 @@ beans.xml
 And, the `server.yml` should include something like the following:
 ```
 jpa:
- -jndiName: 'java:comp/env/jdbc/exampleDS'
-  database:
-    driverClass: org.postgresql.Driver
-    user: postgres
-    password: postgres
-    url: jdbc:postgresql://localhost/postgres
-    validationQuery: select 1
+  - jndiName: 'java:comp/env/jdbc/exampleDS'
+    database:
+      driverClass: org.postgresql.Driver
+      user: postgres
+      password: postgres
+      url: jdbc:postgresql://localhost/postgres
+      validationQuery: select 1
 ```

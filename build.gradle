@@ -1,0 +1,28 @@
+buildscript {
+	repositories {
+  		jcenter()
+        dependencies {
+     		classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        }
+    }
+}
+
+apply from: "$rootDir/gradle/base.gradle"
+
+dependencies {
+	compile "com.cognodyne.dw:jta-bundle:$jtaBundleVersion" 
+	compile "org.jboss:jandex:$jandexVersion"
+    compile ("org.hibernate:hibernate-core:$hibernateVersion") { exclude module:'jandex' }
+    compile "io.dropwizard:dropwizard-db:$dropwizardVersion"
+}
+
+bintray {
+	pkg {
+        name = 'jpa-bundle'
+        desc = 'Dropwizard jpa bundle'
+        labels = ['dropwizard', 'jpa', 'bundle']
+        websiteUrl = 'https://github.com/mstoeckel/jpa-bundle'
+        issueTrackerUrl = 'https://github.com/mstoeckel/jpa-bundle/issues'
+        vcsUrl = 'https://github.com/mstoeckel/jpa-bundle.git'
+	}
+}

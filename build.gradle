@@ -10,7 +10,7 @@ buildscript {
 apply from: "$rootDir/gradle/base.gradle"
 
 dependencies {
-	compile "com.cognodyne.dw:jta-bundle:$jtaBundleVersion" 
+	compile "com.cognodyne.dw:bundle-common:$bundleCommonVersion" 
 	compile "org.jboss:jandex:$jandexVersion"
     compile ("org.hibernate:hibernate-core:$hibernateVersion") { exclude module:'jandex' }
     compile "io.dropwizard:dropwizard-db:$dropwizardVersion"

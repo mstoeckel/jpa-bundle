@@ -1,6 +1,6 @@
 package com.cognodyne.dw.jpa;
 
-import com.cognodyne.dw.jta.JndiSupport;
+import com.cognodyne.dw.common.JndiSupport;
 
 import io.dropwizard.ConfiguredBundle;
 import io.dropwizard.setup.Bootstrap;

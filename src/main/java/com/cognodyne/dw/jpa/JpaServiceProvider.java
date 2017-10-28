@@ -17,7 +17,7 @@ import org.jboss.weld.injection.spi.ResourceReferenceFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.cognodyne.dw.cdi.weld.DeployableWeldService;
+import com.cognodyne.dw.common.DeployableWeldService;
 import com.google.common.collect.Maps;
 
 public class JpaServiceProvider implements JpaInjectionServices, DeployableWeldService {

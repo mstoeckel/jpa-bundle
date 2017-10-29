@@ -1,11 +1,14 @@
 package com.cognodyne.dw.jpa;
 
+import javax.inject.Singleton;
+
 import com.cognodyne.dw.common.JndiSupport;
 
 import io.dropwizard.ConfiguredBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
+@Singleton
 public class JpaBundle implements ConfiguredBundle<JpaConfigurable> {
     @Override
     public void initialize(Bootstrap<?> bootstrap) {
